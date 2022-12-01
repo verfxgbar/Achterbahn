@@ -27,6 +27,7 @@ public class Achterbahn {
 
 		while (zug.hasAccess()) {
 			Fahrgaeste currentGast = warteschlange.front();
+			warteschlange.dequeue();
 			zug.getContent().einsteigen((currentGast == null ? null : currentGast));
 			zug.next();
 		}
