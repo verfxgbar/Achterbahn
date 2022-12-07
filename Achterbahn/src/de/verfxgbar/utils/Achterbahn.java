@@ -21,6 +21,15 @@ public class Achterbahn {
 		}
 
 	}
+	
+	public void alleRaus() {
+   	zug.toFirst();
+
+		while (zug.hasAccess()) {
+			zug.getContent().aussteigen();
+	                zug.next();
+		}
+        }
 
 	public void gaesteEinsteigen() {
 		zug.toFirst();
